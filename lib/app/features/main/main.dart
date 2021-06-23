@@ -10,8 +10,19 @@ class Main extends GetView {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          child: Text("home"),
-        ),
+            child: Obx(() => Column(
+                  children: [
+                    Visibility(
+                        visible: controller.isLoadingData.value,
+                        child: SizedBox(
+                          width: 50,
+                          height: 50,
+                          child: CircularProgressIndicator(),
+                        )),
+                    Text(controller.baseData.value.price),
+                    Text("hey ? ")
+                  ],
+                ))),
       ),
     );
   }
