@@ -421,17 +421,20 @@ class Main extends GetView {
         ]);
   }
 
-  Widget buildExchangeItem(String image) {
-    return Container(
-      margin: EdgeInsetsDirectional.only(end: 6),
-      width: 60,
-      height: 60,
-      decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(8)),
-      child: FractionallySizedBox(
-        widthFactor: 0.7,
-        child: Image.asset(
-          image,
+  Widget buildExchangeItem(List<String> data) {
+    return GestureDetector(
+      onTap: () => openLink(data[1]),
+      child: Container(
+        margin: EdgeInsetsDirectional.only(end: 6),
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(8)),
+        child: FractionallySizedBox(
+          widthFactor: 0.7,
+          child: Image.asset(
+            data[0],
+          ),
         ),
       ),
     );
