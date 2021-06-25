@@ -123,7 +123,7 @@ class Main extends GetView {
                     Padding(
                       padding: const EdgeInsets.only(top: 16),
                       child: Text(
-                        EMOBIT_WEBSITE,
+                        "www.emobit.xyz",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w300,
