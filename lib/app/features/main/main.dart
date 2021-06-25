@@ -106,28 +106,32 @@ class Main extends GetView {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            Flexible(
-              flex: 2,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  FractionallySizedBox(
-                    child: Image.asset(
-                      "assets/images/emobit_logo.png",
+            GestureDetector(
+              behavior: HitTestBehavior.translucent,
+              onTap: () => openLink(EMOBIT_WEBSITE),
+              child: Flexible(
+                flex: 2,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    FractionallySizedBox(
+                      child: Image.asset(
+                        "assets/images/emobit_logo.png",
+                      ),
+                      widthFactor: 0.55,
                     ),
-                    widthFactor: 0.55,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 16),
-                    child: Text(
-                      "www.emobit.xyz",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w300,
-                          fontSize: 28),
-                    ),
-                  )
-                ],
+                    Padding(
+                      padding: const EdgeInsets.only(top: 16),
+                      child: Text(
+                        EMOBIT_WEBSITE,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 28),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
             Flexible(

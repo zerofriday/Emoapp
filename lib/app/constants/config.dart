@@ -1,3 +1,4 @@
+const String EMOBIT_WEBSITE = "https://www.emobit.xyz";
 const String TELEGRAM_LINK = "https://t.me/emobit_official";
 const String TWITTER_LINK = "https://twitter.com/Emobit_xyz";
 const String INSTAGRAM_LINK = "";
