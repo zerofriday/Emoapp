@@ -8,7 +8,7 @@ class MainController extends GetxController {
   BaseRepository baseRepo = new BaseRepository();
   var scaffoldKey = GlobalKey<ScaffoldState>();
   var baseData = new BaseModel().obs;
-  var isLoadingData = false.obs;
+  var rxStatus = RxStatus.empty().obs;
 
   @override
   void onReady() {
@@ -17,12 +17,12 @@ class MainController extends GetxController {
   }
 
   void loadBaseData() {
-    isLoadingData.value = true;
+    rxStatus.value=RxStatus.loading();
     baseRepo.getMainDataMock().then((res) {
       baseData.value = res;
-      isLoadingData.value = false;
+      rxStatus.value=RxStatus.success();
     }).catchError((_error) {
-      isLoadingData.value = false;
+      rxStatus.value=RxStatus.error();
     });
   }
 }
