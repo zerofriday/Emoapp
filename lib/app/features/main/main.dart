@@ -106,12 +106,12 @@ class Main extends GetView {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            GestureDetector(
+            Flexible(
+              flex: 2,
+              child:   GestureDetector(
               behavior: HitTestBehavior.translucent,
               onTap: () => openLink(EMOBIT_WEBSITE),
-              child: Flexible(
-                flex: 2,
-                child: Column(
+              child:Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     FractionallySizedBox(
