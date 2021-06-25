@@ -14,12 +14,12 @@ class BaseRepository {
 
   Future<BaseModel> getMainDataMock() async {
     dynamic json = JsonDecoder().convert("""{
-    "price":"0.000009 ps",
+    "price":"0.000009",
     "holders":400,
     "news":[
         {
             "title":"test first news :D",
-            "link":"https://t.me/some_post_link",
+            "link":"https://t.me/emobit_official",
             "date":"2021/6/22"
         }
     ]
